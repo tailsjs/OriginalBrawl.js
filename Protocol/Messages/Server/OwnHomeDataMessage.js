@@ -20,7 +20,7 @@ class OwnHomeDataMessage extends PiranhaMessage {
     this.writeVInt(2000) // High trophies
     this.writeVInt(666) // Expirience
 
-    this.writeDataReference(28, 18) // Player Icon
+    this.writeDataReference(28, 18) // Player Thumbnail
 
     this.writeVInt(4) // Played Gamemodes
     for(let i of [0, 2, 3, 6]){
@@ -38,7 +38,7 @@ class OwnHomeDataMessage extends PiranhaMessage {
 
     this.writeVInt(0)
     this.writeVInt(0)
-    this.writeVInt(1) // Contolling type (0 - Tap to Move, 1 - Joystick Mode)
+    this.writeVInt(1) // Contolling type (0 - Tap to Move, 1 - Joystick Mode, 2 - Double Joystick Mode)
 
     this.writeBoolean(false) // Battle hints
     

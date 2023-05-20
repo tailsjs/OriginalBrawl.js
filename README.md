@@ -1,6 +1,12 @@
 # OriginalBrawl.js
 First open-source Brawl Stars v2.57 JavaScript server! Based on [nodebrawl-core](https://github.com/tailsjs/nodebrawl-core)
 
+* [Русский язык](/README-ru.md)
+
+## Requirements
+* [NodeJS](https://nodejs.org/)
+* Brain
+
 ## Setting up
 1. Download/clone a repository
 2. Type in console `npm install`
@@ -19,6 +25,12 @@ Just add `YOUR.IP.ADDRESS.HERE game.brawlstarsgame.com` to the end of the file.
 * Battles *(NEED TO PLAY THROUGH BOT BATTLE)*
 * Home *(OwnHomeData without HEX)*
 * Player Profile.
+* Club and Chat
+* Leaderboards
+
+## Credits
+* Depresive Primo for helping with some structures.
+* Ultracore for OHD HEX structure
 
 ## Screens
 ![Main menu](/Screens/menu.jpg)

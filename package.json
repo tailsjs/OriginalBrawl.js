@@ -1,6 +1,6 @@
 {
   "name": "originalbrawl.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "First open-source Brawl Stars v2.57 JavaScript server!",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   "author": "tailsjs",
   "license": "ISC",
   "dependencies": {
-    "crypto-js": "^4.1.1",
     "csv-parse": "^5.3.10",
     "fs": "^0.0.1-security",
-    "net": "^1.0.2"
+    "net": "^1.0.2",
+    "simple-rc4": "^0.0.1-b"
   }
 }

@@ -1,6 +1,8 @@
 const PiranhaMessage = require('../../PiranhaMessage')
 const LoginOKMessage = require('../Server/LoginOKMessage')
 const OwnHomeDataMessage = require('../Server/OwnHomeDataMessage')
+const MyAllianceMessage = require('../Server/MyAllianceMessage')
+const AllianceStreamMessage = require("../Server/AllianceStreamMessage")
 
 class TitanLoginMessage extends PiranhaMessage {
   constructor (client, bytes) {
@@ -22,8 +24,17 @@ class TitanLoginMessage extends PiranhaMessage {
   }
 
   async process () {
+    if(!this.token){
+      this.lowID = [0, 1]
+      this.token = "OriginalBS.js"
+    }
+
+    this.client.lowID = this.lowID[1]
+
     await new LoginOKMessage(this.client, this.lowID[1], this.token).send()
     await new OwnHomeDataMessage(this.client).send()
+    await new MyAllianceMessage(this.client).send()
+    await new AllianceStreamMessage(this.client, "OriginalBrawl.js", "You can download sources of OriginalBrawl.js here: https://github.com/tailsjs/OriginalBrawl.js").send()
   }
 }
 

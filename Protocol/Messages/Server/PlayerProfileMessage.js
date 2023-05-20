@@ -13,7 +13,7 @@ class PlayerProfileMessage extends PiranhaMessage {
     this.writeLogicLong(this.lowID[0], this.lowID[1])
     this.writeString("OriginalBrawl.js") // Player Name
 
-    this.writeVInt(0)
+    this.writeVInt(0) // Unknown
 
     this.writeVInt(16) // Amount of Brawlers
 
@@ -25,24 +25,28 @@ class PlayerProfileMessage extends PiranhaMessage {
         this.writeVInt(15) // Upgrades amount
     }
    
-    this.writeVInt(7)
+    this.writeVInt(7) // IntArray
 
     this.writeLogicLong(1, 666) // Victories
     this.writeLogicLong(2, 666) // Expirience
     this.writeLogicLong(3, 2000) // Trophies
     this.writeLogicLong(4, 2000) // Highest Trophies
     this.writeLogicLong(5, 16) // Brawlers amount
-    this.writeLogicLong(7, 28000018) // Icon
+    this.writeLogicLong(7, 28000018) // Player Thumbnail
     this.writeLogicLong(8, 1488) // Showdown Victories
 
-    this.writeBoolean(false)
+    this.writeBoolean(true) // in Club?
+    this.writeLong(0, 1) // ClubID
+    this.writeString("OriginalBrawl.js Club") // Club Name
+    this.writeDataReference(8, 19) // Club Thumbnail
+    this.writeVInt(1) // Club Type
+    this.writeVInt(1) // Players Count
+    this.writeVInt(2000) // Club Trophies
+    this.writeVInt(0) // Required Trophies
 
-    this.writeVInt(0)
+    this.writeDataReference(14, 249) // Region
 
-    /*this.writeString("OriginalBrawl.js")
-    this.writeVInt(100)
-    this.writeVInt(28000018)
-    this.writeBoolean(false)*/
+    this.writeDataReference(25, 2) // Club Role
   }
 }
 
