@@ -82,7 +82,7 @@ class OwnHomeDataMessage extends PiranhaMessage {
 
     this.writeVInt(3) // Events
 
-    this.writeVInt(1)
+    this.writeVInt(1) // SlotIndex
     this.writeVInt(1) // SlotID
     this.writeVInt(0)
     this.writeVInt(1488) // Timer
@@ -96,7 +96,7 @@ class OwnHomeDataMessage extends PiranhaMessage {
     this.writeString() // TODO string
     this.writeBoolean(false) // All expirience collected.
 
-    this.writeVInt(2)
+    this.writeVInt(2) // SlotIndex
     this.writeVInt(2) // SlotID
     this.writeVInt(0)
     this.writeVInt(1337) // Timer
@@ -110,7 +110,7 @@ class OwnHomeDataMessage extends PiranhaMessage {
     this.writeString() // TODO string
     this.writeBoolean(false) // All expirience collected.
 
-    this.writeVInt(3)
+    this.writeVInt(3) // SlotIndex
     this.writeVInt(3) // SlotID
     this.writeVInt(0)
     this.writeVInt(228) // Timer
@@ -240,7 +240,7 @@ class OwnHomeDataMessage extends PiranhaMessage {
     this.writeVInt(2)
     this.writeVInt(5)
     this.writeVInt(6)
-    this.writeVInt(6)
+    this.writeVInt(5)
     
     this.writeVInt(0)
     this.writeVInt(1488) // Gems

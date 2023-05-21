@@ -13,7 +13,7 @@ class BattleEndMessage extends PiranhaMessage {
 
   encode () {
     this.writeVInt(this.payload.battleEndType) // BattleEndType
-    this.writeVInt(this.payload.battleResult) // Unknown
+    this.writeVInt(0) // Unknown
     this.writeVInt(0) // Coins Gained
     this.writeVInt(0) // "All Coins collected" if 0 
     this.writeVInt(0) // First win Coins
@@ -31,9 +31,9 @@ class BattleEndMessage extends PiranhaMessage {
     
     for(let player of this.payload.playersList){
         this.writeString(player.name) // Player Name
-        this.writeBoolean(player.isPlayer)
-        this.writeBoolean(player.team != 0) // Team
-        this.writeBoolean(false) // Star Player
+        this.writeBoolean(player.isPlayer) // isPlayer
+        this.writeBoolean(player.team != this.payload.playersList[0].team) // Team
+        this.writeBoolean(player.isPlayer) // Star Player
         this.writeDataReference(16, player.brawlerID)
         player.skinID != 0 ? this.writeDataReference(29, player.skinID) : this.writeVInt(0)
         this.writeVInt(2000) // trophies

@@ -9,9 +9,7 @@ class GoHomeFromOfflinePractiseMessage extends PiranhaMessage {
     this.version = 0
   }
 
-  decode () {
-
-  }
+  decode () { }
 
   async process () {
     await new OwnHomeDataMessage(this.client).send()

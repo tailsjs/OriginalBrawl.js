@@ -49,6 +49,8 @@ class LeaderboardMessage extends PiranhaMessage {
 
     this.writeLogicLong(0, this.client.lowID) // Player IDs
     this.writeLogicLong(1, 2000) // Trophies
+    this.writeVInt(2)
+    this.writeString("OriginalBrawl.js Club")
     this.writeVInt(1) // Club members count
     this.writeDataReference(8, 19) // Club Thumbnail
   }

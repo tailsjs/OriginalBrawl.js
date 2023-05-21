@@ -9,9 +9,7 @@ class KeepAliveMessage extends PiranhaMessage {
     this.version = 0
   }
 
-  decode () {
-    // this.readInt()
-  }
+  decode () { }
 
   process () {
     new KeepAliveOKMessage(this.client).send()
