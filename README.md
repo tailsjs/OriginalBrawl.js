@@ -32,7 +32,7 @@ Just add `YOUR.IP.ADDRESS.HERE game.brawlstarsgame.com` to the end of the file.
 * This method works only with jailbreaked iPhones.
 
 ### Method 3.
-You can use risporce client with Frida Injection [Download it right there.](https://mega.nz/file/njxUTayD#srW_zwI36YG0M5JJbZJHneXeEmqfDRM6LftH9YgFnAQ) <br>
+You can use client, that was made by risporce with Frida Injection [Download it right there.](https://mega.nz/file/njxUTayD#srW_zwI36YG0M5JJbZJHneXeEmqfDRM6LftH9YgFnAQ) <br>
 Edit IP in `/Payload/Brawl Stars.app/Dylibs/change-host.js` file. (line 5)
 * This method works only with iOS 10 and higher.
 
